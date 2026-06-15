@@ -1,7 +1,11 @@
 import sys
-sys.path.append('.')
 import os
 from tissue_spline_Utils import *
+
+sys.path.append('.')
+
+save_path = '?' # path where the files will be saved
+fname = '?' # details of the coordinate data processed
 
 coordinates_path = r"ZEN_ScanRegion_Detailed.csv"
 data_in = read_imaris_csv(coordinates_path, skiprows=3)
@@ -73,11 +77,7 @@ def hist_plots(df_filt, plotting_group, n_bins=25, cluster=2, xlabel='GCL'):
 
 plot_objects = sorted(list(set(df_filt.Object)))
 
-path = '?' # path where the files will be saved
-fname = '?' # details of the coordinate data processed
-
-path_plots = path+'plots/'
-
+path_plots = save_path+'plots/' # Where the plots will be saved
 if not os.path.isdir(path_plots):
     os.mkdir(path_plots)
 
