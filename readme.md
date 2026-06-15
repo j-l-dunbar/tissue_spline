@@ -59,6 +59,7 @@ Accesses the hidden bottle neck layer and uses the values to sort the data in or
 
 ### trace_spline_on_predictions()
 Takes the coordinate data representing the autoencoder's dimension reduction and traces a spline.
+Takes the coordinate data representing the autoencoder's dimension reduction and traces a spline.
 This is done because the bottle-neck layer is non-linear, and the tissue axis cannot be accurately represented without this step
 
 
@@ -73,6 +74,7 @@ finds the closes point on the spline for each datum.
 
 
 ### ave_dist()
+calculates the (Euclidian) L2 Norm of projection on the spline.   
 calculates the (Euclidian) L2 Norm of projection on the spline.   
 
 
